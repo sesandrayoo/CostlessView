@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CostlessView",
+  "version": "1.0.0",
+  "description": "Hide prices on invoices to focus on structure and content without pricing distractions",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/no-money.png"
+  },
+  "icons": {
+    "128": "icons/no-money.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+

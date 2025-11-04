@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CostlessView</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CostlessView</h1>
+      <p class="subtitle">hide prices</p>
+    </div>
+
+    <div class="controls">
+      <div class="toggle-container">
+        <span class="toggle-label" id="statusLabel">Enabled</span>
+        <label class="switch">
+          <input type="checkbox" id="toggleExtension" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="info">
+      <p class="description">
+        When enabled, prices will be masked as <strong>$**.**</strong> on invoice pages.
+      </p>
+      <div class="example">
+        <div class="example-row">
+          <span class="label">Original:</span>
+          <span class="value original">$1,234.56</span>
+        </div>
+        <div class="example-row">
+          <span class="label">Masked:</span>
+          <span class="value masked">$**.**</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
