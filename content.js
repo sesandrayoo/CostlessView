@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  let isEnabled = true;
+  let isEnabled = false;
   let originalValues = new Map();
 
   const pricePattern = /([\$€£])\s*[\d,]+\.?\d*/g;
@@ -80,7 +80,7 @@
   function init() {
     // check if extension is enabled
     chrome.storage.sync.get(['enabled'], function(result) {
-      isEnabled = result.enabled !== false; // default to true
+      isEnabled = result.enabled === true; // default to false (disabled)
 
       if (isEnabled) {
         processDOM();

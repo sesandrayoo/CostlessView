@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const statusLabel = document.getElementById('statusLabel');
 
   chrome.storage.sync.get(['enabled'], function(result) {
-    const enabled = result.enabled !== false; // default to true
+    const enabled = result.enabled === true; // default to false (disabled)
     toggle.checked = enabled;
     updateStatusLabel(enabled);
   });
